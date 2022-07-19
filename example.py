@@ -1,8 +1,9 @@
-from bad import 
+from bad import BetterCode
 
 
 def main():
-    pass
+    better = BetterCode()
+    print(better.get_random_alphabet())
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-from bad import BetterCode
+from bad_code.bad import BetterCode
 
 
 def main():

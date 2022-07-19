@@ -26,15 +26,16 @@ class BetterCode:
     def howdy(self, a):
         return int(sum(ord(c) for c in a)) % 100 // 5
 
-    a = (self.the_stuff() | self.oh_my( 1,  2, 0) | self.oh_my(-2, 2, -2))
-    wer = a | set([55 // 11]) | {self.howdy('sick dudesfsd'), self.howdy('a') ** 2, self.howdy('10234'), self.howdy('m')}
+    def loose_bits(self):
+        a = (self.the_stuff() | self.oh_my( 1,  2, 0) | self.oh_my(-2, 2, -2))
+        wer = a | set([55 // 11]) | {self.howdy('sick dudesfsd'), self.howdy('a') ** 2, self.howdy('10234'), self.howdy('m')}
 
+        x = {g % ((self.howdy('4') + 3) * 2) for g in (wer | {self.howdy('4') + 5} | {self.howdy('4') * 2 - 3} | {19, 21} | self.probably_okay() | {13} | self.oh_my(1, 2, 10) | self.oh_my(-2, 5, -2) | {11, 2, 4, 6, 8, 9})}
+
+        j = list(x)
+        smoosh(j)
+
+        print(''.join(chr(ord(chr(97)) + j[i]) for i in j))
+    
     def probably_okay(self):
         return set(map(lambda x: int(abs(self.howdy(str(x))) ** (1 / 2)) % (self.howdy('m') * 2), self.the_stuff()))
-
-    x = {g % ((self.howdy('4') + 3) * 2) for g in (wer | {self.howdy('4') + 5} | {self.howdy('4') * 2 - 3} | {19, 21} | self.probably_okay() | {13} | self.oh_my(1, 2, 10) | self.oh_my(-2, 5, -2) | {11, 2, 4, 6, 8, 9})}
-
-    j = list(x)
-    smoosh(j)
-
-    print(''.join(chr(ord(chr(97)) + j[i]) for i in j))

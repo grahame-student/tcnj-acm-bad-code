@@ -46,3 +46,8 @@ class TestBetterCode(TestCase):
     def test_howdy_returns_10_when_passed_4(self):
         better = BetterCode()
         assert_that(better.howdy("4"), equal_to(10))
+
+    def test_the_stuff_returns_set_of_numbers(self):
+        better = BetterCode()
+        expected_set = {0, -12, -1, -8, -6, -4, -3, -2}
+        assert_that(better.the_stuff(), equal_to(10))

@@ -2,7 +2,7 @@ from unittest import TestCase
 import re
 
 from bad_code.bad import BetterCode
-from hamcrest import assert_that, equal_to
+from hamcrest import assert_that, equal_to, is_not
 
 
 class TestBetterCode(TestCase):
@@ -25,5 +25,4 @@ class TestBetterCode(TestCase):
         better = BetterCode()
         string = better.get_random_alphabet()
         pattern = re.compile("[a-z]+")
-        result = pattern.fullmatch(string) is not None
-        assert_that(result, equal_to(True))
+        assert_that(pattern.fullmatch(string), is_not(equal_to(None)))

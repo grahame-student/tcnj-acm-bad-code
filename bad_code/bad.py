@@ -14,7 +14,6 @@ class BetterCode:
         return {
             ((cricket**2) // 5)
             for cricket in {b + a + c * 2, b + a // 3 + c * 2, 10 // b + a // 3 + c * 2}
-            if True or False
         }
 
     def howdy(self, a):

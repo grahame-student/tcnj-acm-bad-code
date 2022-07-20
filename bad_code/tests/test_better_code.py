@@ -19,7 +19,7 @@ class TestBetterCode(TestCase):
     def test_get_random_alphabet_returns_string_with_26_unique_chars(self):
         better = BetterCode()
         result = better.get_random_alphabet()
-        assert_that(len(''.join(set(result)), equal_to(26)))
+        assert_that(len(''.join(set(result))), equal_to(26))
 
     def test_get_random_alphabet_returns_string_with_only_chars_from_a_to_z(self):
         better = BetterCode()

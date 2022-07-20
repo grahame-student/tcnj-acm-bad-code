@@ -46,3 +46,33 @@ class TestBetterCode(TestCase):
     def test_howdy_returns_10_when_passed_4(self):
         better = BetterCode()
         assert_that(better.howdy("4"), equal_to(10))
+
+    def test_the_stuff_returns_set_of_numbers(self):
+        better = BetterCode()
+        expected_set = {0, -12, -1, -8, -6, -4, -3, -2}
+        assert_that(better.the_stuff(), equal_to(expected_set))
+
+    def test_probably_okay_returns_set_of_numbers(self):
+        better = BetterCode()
+        expected_set = {0, 1}
+        assert_that(better.probably_okay(), equal_to(expected_set))
+
+    def test_oh_my_returns_set_of_0_1_20_when_passed_1_2_0(self):
+        better = BetterCode()
+        expected_set = {0, 1, 20}
+        assert_that(better.oh_my(1, 2, 0), equal_to(expected_set))
+
+    def test_oh_my_returns_set_of_16_3_7_when_passed_minus_2_2_minus_2(self):
+        better = BetterCode()
+        expected_set = {16, 3, 7}
+        assert_that(better.oh_my(-2, 2, -2), equal_to(expected_set))
+
+    def test_oh_my_returns_set_of_88_105_180_when_passed_1_2_10(self):
+        better = BetterCode()
+        expected_set = {88, 105, 180}
+        assert_that(better.oh_my(1, 2, 10), equal_to(expected_set))
+
+    def test_oh_my_returns_set_of_0_12_5_when_passed_minus_2_5_minus_2(self):
+        better = BetterCode()
+        expected_set = {0, 12, 5}
+        assert_that(better.oh_my(-2, 5, -2), equal_to(expected_set))

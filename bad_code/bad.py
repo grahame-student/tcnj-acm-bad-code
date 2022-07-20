@@ -5,8 +5,8 @@ class BetterCode:
     def get_random_alphabet(self):
         a = (
             {0, -12, -1, -8, -6, -4, -3, -2}
-            | self.oh_my(1, 2, 0)
-            | self.oh_my(-2, 2, -2)
+            | {0, 1, 20}
+            | {16, 3, 7}
         )
         wer = (
             a
@@ -28,8 +28,8 @@ class BetterCode:
                 | {19, 21}
                 | {0, 1}
                 | {13}
-                | self.oh_my(1, 2, 10)
-                | self.oh_my(-2, 5, -2)
+                | {88, 105, 180}
+                | {0, 12, 5}
                 | {11, 2, 4, 6, 8, 9}
             )
         }

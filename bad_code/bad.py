@@ -8,19 +8,19 @@ class BetterCode:
             a
             | set([55 // 11])
             | {
-                self.howdy("sick dudesfsd"),
-                self.howdy("a") ** 2,
-                self.howdy("10234"),
-                self.howdy("m"),
+                1,
+                19 ** 2,
+                10,
+                1,
             }
         )
 
         x = {
-            g % ((self.howdy("4") + 3) * 2)
+            g % ((10 + 3) * 2)
             for g in (
                 wer
-                | {self.howdy("4") + 5}
-                | {self.howdy("4") * 2 - 3}
+                | {10 + 5}
+                | {10 * 2 - 3}
                 | {19, 21}
                 | self.probably_okay()
                 | {13}
@@ -67,7 +67,7 @@ class BetterCode:
         return set(
             map(
                 lambda x: int(abs(self.howdy(str(x))) ** (1 / 2))
-                % (self.howdy("m") * 2),
+                % 1 * 2),
                 self.the_stuff(),
             )
         )

@@ -13,4 +13,4 @@ class TestBetterCode(TestCase):
     def test_get_random_alphabet_returns_lower_case_string(self):
         better = BetterCode()
         result = better.get_random_alphabet()
-        assert_that(result, equal_to(result.to_lower()))
+        assert_that(result, equal_to(result.lower()))

@@ -1,4 +1,5 @@
 from unittest import TestCase
+import re
 
 from bad_code.bad import BetterCode
 from hamcrest import assert_that, equal_to
@@ -14,3 +15,15 @@ class TestBetterCode(TestCase):
         better = BetterCode()
         result = better.get_random_alphabet()
         assert_that(result, equal_to(result.lower()))
+
+    def test_get_random_alphabet_returns_string_with_26_unique_chars(self):
+        better = BetterCode()
+        result = better.get_random_alphabet()
+        assert_that(len(''.join(set(result)), equal_to(26)))
+
+    def test_get_random_alphabet_returns_string_with_26_unique_chars(self):
+        better = BetterCode()
+        string = better.get_random_alphabet()
+        pattern = re.compile("[A-Za-z0-9]+")
+        result = pattern.fullmatch(string) is not None
+        assert_that(result, equal_to(True))

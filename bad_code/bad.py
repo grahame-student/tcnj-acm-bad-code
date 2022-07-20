@@ -67,7 +67,7 @@ class BetterCode:
         return set(
             map(
                 lambda x: int(abs(self.howdy(str(x))) ** (1 / 2))
-                % 1 * 2),
+                % (1 * 2),
                 self.the_stuff(),
             )
         )

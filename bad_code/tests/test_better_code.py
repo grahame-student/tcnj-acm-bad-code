@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from hamcrest import assert_that, equal_to
 from bad_code.bad import BetterCode
+from hamcrest import assert_that, equal_to
 
 
 class TestBetterCode(TestCase):

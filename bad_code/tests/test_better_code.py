@@ -42,3 +42,7 @@ class TestBetterCode(TestCase):
     def test_howdy_returns_19_when_passed_a(self):
         better = BetterCode()
         assert_that(better.howdy("a"), equal_to(19))
+
+    def test_howdy_returns_10_when_passed_4(self):
+        better = BetterCode()
+        assert_that(better.howdy("4"), equal_to(10))

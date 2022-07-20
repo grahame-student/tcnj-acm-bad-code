@@ -24,6 +24,6 @@ class TestBetterCode(TestCase):
     def test_get_random_alphabet_returns_string_with_26_unique_chars(self):
         better = BetterCode()
         string = better.get_random_alphabet()
-        pattern = re.compile("[A-Za-z0-9]+")
+        pattern = re.compile("[a-z]+")
         result = pattern.fullmatch(string) is not None
         assert_that(result, equal_to(True))

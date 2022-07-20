@@ -50,4 +50,4 @@ class TestBetterCode(TestCase):
     def test_the_stuff_returns_set_of_numbers(self):
         better = BetterCode()
         expected_set = {0, -12, -1, -8, -6, -4, -3, -2}
-        assert_that(better.the_stuff(), equal_to(10))
+        assert_that(better.the_stuff(), equal_to(expected_set))

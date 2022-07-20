@@ -3,7 +3,7 @@ from random import shuffle as smoosh
 
 class BetterCode:
     def get_random_alphabet(self):
-        a = self.the_stuff() | self.oh_my(1, 2, 0) | self.oh_my(-2, 2, -2)
+        a = {0, -12, -1, -8, -6, -4, -3, -2} | self.oh_my(1, 2, 0) | self.oh_my(-2, 2, -2)
         wer = (
             a
             | set([5])
@@ -22,7 +22,7 @@ class BetterCode:
                 | {15}
                 | {17}
                 | {19, 21}
-                | self.probably_okay()
+                | {0, 1}
                 | {13}
                 | self.oh_my(1, 2, 10)
                 | self.oh_my(-2, 5, -2)
@@ -49,9 +49,4 @@ class BetterCode:
         return int(sum(ord(c) for c in a)) % 100 // 5
 
     def probably_okay(self):
-        return set(
-            map(
-                lambda x: int(abs(self.howdy(str(x))) ** (1 / 2)) % 2,
-                self.the_stuff(),
-            )
-        )
+        return {0, 1}

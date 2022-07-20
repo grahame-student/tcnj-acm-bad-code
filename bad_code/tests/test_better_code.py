@@ -55,4 +55,4 @@ class TestBetterCode(TestCase):
     def test_probably_oaky_returns_set_of_numbers(self):
         better = BetterCode()
         expected_set = {0, 1}
-        assert_that(better.probably_oaky(), equal_to(expected_set))
+        assert_that(better.probably_okay(), equal_to(expected_set))

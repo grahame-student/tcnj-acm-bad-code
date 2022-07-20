@@ -3,35 +3,7 @@ from random import shuffle
 
 class BetterCode:
     def get_random_alphabet(self):
-        x = {
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24,
-            25,
-        }
-        j = list(x)
+        j = range(0, 26)
         shuffle(j)
         return "".join(chr(ord(chr(97)) + j[i]) for i in j)
 

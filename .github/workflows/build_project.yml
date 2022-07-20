@@ -1,0 +1,44 @@
+---
+name: Run Python Tests
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Bad code example
+    strategy:
+      matrix:
+        python-version: ['3.9']
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v3.0.2
+      
+      - name: Install Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      
+      - name: Run tests with pytest
+        run: |
+          pytest --cov=./ \
+                 --cov-branch \
+                 --cov-report=xml:pytest-cobertura.xml \
+                 --cov-fail-under 100
+
+      - name: ReportGenerator
+        if: always()
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.1.9
+        with:
+          reports: pytest-cobertura.xml
+          targetdir: .
+
+      - name: Upload coverage report artifact
+        if: always()
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: index.html 
+          path: .

@@ -12,8 +12,10 @@ This repository is the result.
 
 ```sh
 $ python3 bad.py
+mwbhjordfisxgnluvqkypzceta
 ```
 
 ## License
 
-[MIT](https://github.com/TomerAberbach/tcnj-acm-bad-code/blob/main/license) © [Tomer Aberbach](https://github.com/TomerAberbach)
+[MIT](https://github.com/grahame-student/tcnj-acm-bad-code/blob/main/license) © [Tomer Aberbach](https://github.com/TomerAberbach)
+

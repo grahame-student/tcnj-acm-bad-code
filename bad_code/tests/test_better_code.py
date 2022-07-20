@@ -26,3 +26,20 @@ class TestBetterCode(TestCase):
         string = better.get_random_alphabet()
         pattern = re.compile("[a-z]+")
         assert_that(pattern.fullmatch(string), is_not(equal_to(None)))
+
+    def test_howdy_returns_1_when_passed_m(self):
+        better = BetterCode()
+        assert_that(better.howdy("m"), equal_to(1))
+
+    def test_howdy_returns_10_when_passed_10234(self):
+        better = BetterCode()
+        assert_that(better.howdy("10234"), equal_to(10))
+
+    def test_howdy_returns_1_when_passed_sick_dudesfsd(self):
+        better = BetterCode()
+        assert_that(better.howdy("sick dudesfsd"), equal_to(1))
+        
+    def test_howdy_returns_19_when_passed_a(self):
+        better = BetterCode()
+        assert_that(better.howdy("a"), equal_to(19))
+        

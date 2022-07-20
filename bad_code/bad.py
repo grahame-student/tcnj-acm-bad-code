@@ -36,22 +36,7 @@ class BetterCode:
         return "".join(chr(ord(chr(97)) + j[i]) for i in j)
 
     def the_stuff(self):
-        a = 10
-        y = []
-        m = 4
-        t = 6
-
-        while a > 3:
-            a = a - 2
-            y = y + [m - a * 2]
-            t = t + 3
-
-        the_other_stuff = set([18 - t for x in [1, 2, 10]])
-        for g in y:
-            the_other_stuff.add(int(g / 2))
-            the_other_stuff.add(g)
-
-        return (the_other_stuff | {-a}) | {was // 2 for was in (the_other_stuff | {-a})}
+        return {0, -12, -1, -8, -6, -4, -3, -2}
 
     def oh_my(self, b, a, c):
         return {

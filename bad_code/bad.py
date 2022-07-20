@@ -5,7 +5,7 @@ class BetterCode:
     def get_random_alphabet(self):
         j = list(range(0, 26))
         shuffle(j)
-        return "".join(chr(ord(chr(97)) + j[i]) for i in j)
+        return "".join(chr(ord("a") + j[i]) for i in j)
 
     def the_stuff(self):
         return {0, -12, -1, -8, -6, -4, -3, -2}

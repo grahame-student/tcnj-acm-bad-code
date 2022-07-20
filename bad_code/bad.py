@@ -9,7 +9,7 @@ class BetterCode:
             | set([55 // 11])
             | {
                 1,
-                19 ** 2,
+                19**2,
                 10,
                 1,
             }
@@ -66,8 +66,7 @@ class BetterCode:
     def probably_okay(self):
         return set(
             map(
-                lambda x: int(abs(self.howdy(str(x))) ** (1 / 2))
-                % (1 * 2),
+                lambda x: int(abs(self.howdy(str(x))) ** (1 / 2)) % (1 * 2),
                 self.the_stuff(),
             )
         )

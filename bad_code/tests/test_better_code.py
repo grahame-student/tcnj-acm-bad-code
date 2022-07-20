@@ -61,3 +61,8 @@ class TestBetterCode(TestCase):
         better = BetterCode()
         expected_set = {0, 1, 20}
         assert_that(better.oh_my(1, 2, 0), equal_to(expected_set))
+
+    def test_oh_my_returns_set_of_16_3_7_when_passed_minus_2_2_minus_2(self):
+        better = BetterCode()
+        expected_set = {16, 3, 7}
+        assert_that(better.oh_my(-2, 2, -2), equal_to(expected_set))

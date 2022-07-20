@@ -19,12 +19,7 @@ class BetterCode:
             | {11, 2, 4, 6, 8, 9}
         )
 
-        x = {
-            g % 26
-            for g in (
-                wer
-            )
-        }
+        x = {g % 26 for g in (wer)}
 
         j = list(x)
         smoosh(j)

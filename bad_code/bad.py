@@ -3,13 +3,8 @@ from random import shuffle as smoosh
 
 class BetterCode:
     def get_random_alphabet(self):
-        a = (
-            {0, -12, -1, -8, -6, -4, -3, -2}
-            | {0, 1, 20}
-            | {16, 3, 7}
-        )
         wer = (
-            a
+            {0, -12, -1, -8, -6, -4, -3, -2} | {0, 1, 20} | {16, 3, 7}
             | set([5])
             | {
                 1,

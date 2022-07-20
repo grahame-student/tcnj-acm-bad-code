@@ -52,7 +52,12 @@ class TestBetterCode(TestCase):
         expected_set = {0, -12, -1, -8, -6, -4, -3, -2}
         assert_that(better.the_stuff(), equal_to(expected_set))
 
-    def test_probably_oaky_returns_set_of_numbers(self):
+    def test_probably_okay_returns_set_of_numbers(self):
         better = BetterCode()
         expected_set = {0, 1}
         assert_that(better.probably_okay(), equal_to(expected_set))
+
+    def test_oh_my_returns_set_of_0_1_20_when_passed_1_2_0(self):
+        better = BetterCode()
+        expected_set = {0, 1, 20}
+        assert_that(better.oh_my(1, 2, 0), equal_to(expected_set))

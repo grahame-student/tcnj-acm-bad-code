@@ -4,6 +4,12 @@ from random import shuffle
 
 class BetterCode:
     def get_random_alphabet(self):
+        """
+        Generate a random shuffle of the lower case letters a-z
+        
+        :return: Returns a string containing the shuffled lower case letters a-z
+        :rtype:  string
+        """
         j = list(range(0, 26))
         shuffle(j)
         return "".join(chr(ord("a") + j[i]) for i in j)
@@ -26,4 +32,10 @@ class BetterCode:
 
     @deprecated(reason="This method is deprecated and will be removed in a future version")
     def probably_okay(self):
+        """
+        Generate a set containing the numers 0 and 1
+        
+        :return: Returns a set instance containing the integers 0 and 1
+        :rtype:  set
+        """
         return {0, 1}

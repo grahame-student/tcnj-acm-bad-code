@@ -1,3 +1,4 @@
+from deprecation import deprecated
 from random import shuffle
 
 

@@ -26,10 +26,7 @@ class BetterCode:
     )
     def oh_my(self, b, a, c):
         values = {b + a + c * 2, b + a // 3 + c * 2, 10 // b + a // 3 + c * 2}
-        return {
-            ((value**2) // 5)
-            for value in values
-        }
+        return {((value**2) // 5) for value in values}
 
     @deprecated(
         reason="This method is deprecated and will be removed in a future version"

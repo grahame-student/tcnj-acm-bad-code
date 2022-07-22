@@ -19,6 +19,12 @@ class BetterCode:
         reason="This method is deprecated and will be removed in a future version"
     )
     def the_stuff(self):
+        """
+        Generate a set containing the numers 0, -12, -1, -8, -6, -4, -3 and -2
+
+        :return: Returns a set instance containing the integers 0, -12, -1, -8, -6, -4, -3 and -2
+        :rtype:  set
+        """
         return {0, -12, -1, -8, -6, -4, -3, -2}
 
     @deprecated(
